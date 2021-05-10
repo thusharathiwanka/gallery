@@ -1,13 +1,57 @@
+:root {
+   --accent-color: #fe6d73;
+   --font-color: #1b263b;
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: var(--font-color);
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+}
+
+.App {
+   max-width: 1140px;
+   margin: 0 auto;
+}
+
+.navbar {
+   min-height: 10vh;
+   display: flex;
+   align-items: center;
+}
+
+.navbar h2 {
+   text-transform: uppercase;
+   position: relative;
+   font-size: 1.8rem;
+}
+
+.navbar h2::after {
+   content: "";
+   width: 5rem;
+   height: 0.5rem;
+   background-color: var(--accent-color);
+   position: absolute;
+   bottom: 8%;
+   right: -18%;
+   z-index: -1;
+}
+
+.app-header h1 {
 }
